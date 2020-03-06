@@ -16,17 +16,17 @@ html, body {
   display: flex;
   justify-content: center;
   text-align: center;
-  height: 100vh;
+  height: 100vh; 
   align-items: center;
   background-color: #1A1A1D;
 }
 
 .GabungInContainer {
-  width: 20%;
+  margin: auto;
 }
 
 .GabungInput {
-  border-radius: 0;
+  border-radius: 5px;
   padding: 15px 20px;
   width: 100%;
 }
@@ -54,18 +54,40 @@ html, body {
   margin-top: 20px;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  .GabungOutContainer {
-    height: 100%;
-  }
-
-  .GabungInContaine {
-    width: 90%;
-  }
-
-
-}
-
 button:focus {
   outline: 0;
+}
+
+
+@media screen and (min-width: 1080px) {
+  .GabungOutContainer{
+    width: 100vh;
+    height: 100vh;
+    margin: 0px auto;
+  }
+  .GabungInContainer {
+    width: 90%;
+  }
+}
+  @media screen and (min-width: 4080px) {
+    .GabungOutContainer {
+      width: 100vh;
+      height: 100vh;
+      overflow: hidden;
+      margin: 0px auto;
+    }
+    .GabungInContainer {
+      width: 90%;
+    }
+  }
+@media screen and (min-width: 780px) {
+  .GabungOutContainer {
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0px auto;
+  }
+  .GabungInContainer {
+    width: 350px;
+  }
 }

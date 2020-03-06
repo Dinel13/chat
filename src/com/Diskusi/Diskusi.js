@@ -12,7 +12,7 @@ let socket;
 const Diskusi = ({ location }) => {
   const [nama, setNama] = useState("");
   const [ruang, setRuang] = useState("");
-  const [users, setUsers] = useState("");
+  const [user, setUsers] = useState("");
   const [pesan, setPesan] = useState("");
   const [pesans, setPesans] = useState([]);
   const ENDPONINT = "https://chatudin.herokuapp.com/";
@@ -42,8 +42,9 @@ const Diskusi = ({ location }) => {
       setPesans([...pesans, pesan]);
     });
 
-    socket.on('roomData', ({ users }) => {
+    socket.on('roomData', ({ ruang, users }) => {
       setUsers(users);
+      console.log(user)
     })
 
     // unruk akhir react hook
@@ -71,7 +72,7 @@ const Diskusi = ({ location }) => {
         <Input psn={pesan} setPsn={setPesan} krmPesan={kirimPesan} />
         
       </div>
-      <TextContainer users = {users}/>
+      <TextContainer orang={user} />
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 import './Input.css'
 
 const Input = ({psn, setPsn, krmPesan}) => (
-  <div>
+  <div className="ter">
     <input
       className="input"
       type="text"
